@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        交集选择器
+        是一个p元素
+        同时作为子元素的第一个元素
+         */
+
+        /* p:nth-child(1){
+            color: red;
+        } */
+
+        /* 
+        后代选择器 p后面是一个空格
+        p元素元素后代
+        作为子元素的第一个元素
+        span1 会变红
+         */
+
+         p :nth-child(1){
+            color: red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <P>文字内容1</P>
+        <P>文字内容2</P>
+    </div>
+    <p>
+        <span>span1</span>
+        <span>span2</span>
+    </p>
+</body>
+</html>

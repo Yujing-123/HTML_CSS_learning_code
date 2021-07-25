@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 文字内容3 和 i an span 3 会变成红色 */
+        /* :nth-child(3) {
+            color: red;
+        } */
+
+/*  <!-- 如果 :nth-child(3)前面加个个p，就只有文字内容3会变红，因为
+    必须是p元素，而且还是父亲的第三个孩子
+    交集选择器
+    --> */
+        p:nth-child(3) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        :nth-child(1)
+
+        是父元素中的第1个子元素，
+        不管是第几层的父元素，
+        只要它相对于它的父元素是第一个孩子，
+        它就会被选中
+            -->
+
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+
+    </div>
+    <p>
+        <span> i am span 1</span><span> i am span 2</span><span> i am span 3</span><span> i am span 4</span><span> i am
+            span 5</span>
+    </p>
+
+    <!-- 这个div全部都会变成红色，因为这个div是相对body这个父元素的第三个孩子 -->
+    <p>
+        <strong>strong内容1</strong>
+        <strong>strong内容2</strong>
+        <strong>strong内容3</strong>
+        <strong>strong内容4</strong>
+        <strong>strong内容5</strong>
+    </p>
+
+
+
+
+
+
+</body>
+
+</html>

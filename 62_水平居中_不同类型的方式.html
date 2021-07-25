@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            background-color: #f00;
+
+
+            /* 1.普通文本 */
+           /*  text-align: center; */
+
+           /* 2.行内元素 */
+           /* text-align: center; */
+
+           /* 3.图片：行内替换元素  */
+           /* text-align: center; */
+
+           /* 4.行内块级元素 */
+          /*  text-align: center;  */
+
+          /* 5.块级元素 */
+          text-align: center;
+        }
+
+        strong{
+            background-color: purple;
+        }
+        .ib{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+
+        }
+        .sonbox1{
+            background-color: yellowgreen;
+        }
+
+        .sonbox2{
+            height: 100px;
+            width: 100px;
+            background-color: yellowgreen;
+            margin: 0 auto;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 1普通文本-->
+     <!--    div元素 -->
+
+     <!-- 2. 行内元素 -->
+     <!-- <strong>strong元素</strong> -->
+
+     <!-- 3.图片：行内替换元素 input -->
+     <!-- <img src="img/1.jpg" alt=""> -->
+
+     <!-- 4.行内块级元素 display:inline-block-->
+     <!-- <span class="ib"></span> -->
+
+     <!-- 5.块级元素 -->
+   <!--   <div class="sonbox1">blockdiv</div> -->
+     <!-- block盒子的宽度和它爸爸一样，不需要居中，需要居中的是block盒子里面的内容 -->
+<!-- 给他爸爸设置text-aline：center，它会继承过去给它里面的内容使用 -->
+
+<!-- 给这个sonbox设置宽高之后 -->
+<div class="sonbox2">blockdiv</div>
+<!-- 设置宽100之后，看起来只有100宽，但是实际上它还是占据整个这一行
+    
+所以给他爸爸设置text-aline：center，它会继承给它里面的元素，但是它本身不会居中
+它需要在自己里面设置margin：0 atuo；
+-->
+    </div>
+</body>
+
+</html>

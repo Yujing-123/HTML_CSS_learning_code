@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .myform{
+           width: 300px;
+           margin: 100px auto;
+       }
+       input[type="submit"]{
+           display: block;
+           margin: 0px auto;
+           margin-top: 20px;
+       }
+    </style>
+    <script>
+        window.onload = function(){
+            var submitBtn = document.getElementById("Btn");
+            var username = document.getElementById("userName");
+            var password = document.getElementById("password");
+            submitBtn.onclick = function() {
+                if(username.value === 'admin' && password.value === "123456"){
+                    alert('登录成功！');
+                }else{
+                    alert('请再次输入密码！');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="myform">
+        <form action="" target="_blank">
+        <fieldset>
+            <legend>登录信息</legend>
+            <!-- 手机输入框 -->
+            <div>
+                <label for="username">用户名:</label>
+                <input type="text"
+                 maxlength="10" 
+                 placeholder="请输入您的用户名"
+                 name="username"
+                 autofocus
+                 id="userName"
+                 >
+            </div>
+            <!-- 密码输入框 -->
+            <div>
+                <label for="password">密码:</label>
+                <input type="password" 
+                placeholder="请输入您的密码"  
+                name="password"
+                id="password">
+            </div>
+            <input id="Btn" type="submit">
+        </fieldset>
+    </form>
+    </div>
+    
+
+</body>
+</html>

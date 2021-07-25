@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.跳转到标题1，标题1的字体颜色:target
+        //2.目标伪类
+        //当button是disabled时候，希望button的文字颜色是粉色
+    </script>
+    <style>
+        :target{
+            color: red;
+        }
+     
+        /* button[disabled]{
+            color: pink;
+        } */
+         :disabled{  /* 元素状态伪类 */
+            color: red;
+        }
+         
+        
+
+
+    </style>
+</head>
+<body>
+    <button >我是按钮</button>
+    <button disabled>我是按钮disabled</button>
+    <button ebaled>我是按钮enabled</button>
+    <!-- 按钮有disabled / enabled的这个状态 -->
+</body>
+</html>

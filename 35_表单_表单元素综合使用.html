@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <!-- fieldset
+        表单元素组
+
+        legend
+        fieldset的标题
+     -->
+        <fieldset>
+            <legend>必填信息</legend>
+            <!-- 手机输入框 -->
+            <div>
+                <span>手机:</span>
+                <input type="text"
+                 maxlength="10" 
+                 placeholder="请输入您的手机号码"
+                name="phone"
+                 autofocus
+            
+                 >
+            </div>
+            <!-- 密码输入框 -->
+            <div>
+                <span>密码:</span>
+                <input type="password" placeholder="请输入您的密码"  name="password">
+                <!-- input是行内替换元素
+        input替换成输入框
+        基本所有替换元素都是行内元素
+        -->
+            </div>
+            <!-- 验证码输入框 -->
+            <div>
+                <span>验证码:</span>
+                <input type="text">
+                <!-- 实现按钮的两种方法 -->
+                <!--1. <button>获取验证码</button> -->
+                <!--2. 使用input实现 -->
+                <input type="button" 
+                value="获取验证码" 
+                disabled>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>选填信息</legend>
+            <!-- 照片选择 -->
+            <div>
+                <span>照片：</span>
+                <input type="file">
+
+            </div>
+            <!-- 性别选择 -->
+            <div>
+                <span>照片：</span>
+                <!-- 单选框 -->
+                男<input type="radio" name="sex" checked>
+                女<input type="radio" name="sex">
+            </div>
+            <!-- 兴趣选择 -->
+            <div>
+                <span>兴趣：</span>
+                <!-- 复选框 -->
+                唱歌<input type="checkbox" name="hobby" checked>
+                跳舞<input type="checkbox" name="hobby">
+                rap<input type="checkbox" name="hobby">
+                篮球<input type="checkbox" name="hobby">
+            </div>
+            <!-- 学历选择 -->
+            <div>
+                <span>学历：</span>
+                <select name="education" id="" multiple>
+                    <option value="0">小学</option>
+                    <option value="1">初中</option>
+                    <option value="2" selected>高中</option>
+                    <option value="3">大学</option>
+                </select>
+            </div>
+            <!-- 简介 -->
+            <div>
+                <span>简介：</span>
+                <textarea name="" id="" cols="20" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <!-- 重置按钮
+    ：前提1： type必须是reset类型，value值可以不写
+    前提2： 所有的内容必须在一个表单中，所有的东西都可以在form中
+    -->
+        <input type="reset">
+
+    </form>
+</body>
+
+</html>

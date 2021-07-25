@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: #f00;
+            /* border会把span往下挤 */
+            /*  border: 5px solid black; */
+
+            /* 会把span遮住，但是不会改变span的位置，它是不占空间 */
+            /*   outline: 15px solid pink; */
+
+        }
+
+        span {
+            background-color: orange;
+        }
+
+        /* 按tab建会有外边框，去除这个 */
+        /* 按tab会选中，但是不会有边框 */
+        a,
+        input,
+        textarea {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <span>span</span>
+    <a href="">百度一下</a>
+    <input type="b">
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* n:0,1,2,3,4,5,6,7... */
+        /* 选n的话，全部都会变颜色 */
+        /* :nth-child(n){
+            color: red;
+        } */
+        /* 加个p的话，也只有p元素会变颜色 */
+        /* p:nth-child(n){
+            color: red;
+        } */
+    
+        /* 2n指的是 
+        2n: 2, 4, 6,8 偶数
+        如果不加p的话，则全部都是红色，因为body是相当于html的第二个元素
+        */
+        /* 2n 也可以替换成even */
+        /* p:nth-child(2n) {
+            color: red;
+        } */
+        /* p:nth-child(even) {
+            color: red;
+        } */
+
+        /* 奇数 ： 2n+1  1,3,5,7
+        odd
+         */
+         /* p:nth-child(2n+1) {
+            color: red;
+        }
+        p:nth-child(odd) {
+            color: yellow;
+        } */
+
+
+        /* 3n+1  1,4,7,10 */
+        /* p:nth-child(3n+1) {
+            color: blue;
+        } */
+
+        /* n前面的数字可以是负数： -n+5
+        取前五个
+         */
+        p:nth-child(-n+5) {
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+
+    </div>
+    <div>
+        <span> i am span 1</span>
+        <span> i am span 2</span>
+        <span> i am span 3</span>
+        <span> i am span 4</span>
+        <span> i amspan 5</span>
+    </div>
+
+    <!-- 这个div全部都会变成红色，因为这个div是相对body这个父元素的第三个孩子 -->
+    <div>
+        <strong>strong内容1</strong>
+        <strong>strong内容2</strong>
+        <strong>strong内容3</strong>
+        <strong>strong内容4</strong>
+        <strong>strong内容5</strong>
+    </div>
+</body>
+
+
+</html>

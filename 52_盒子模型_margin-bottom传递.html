@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* margin-bottom传递
+如果块级元素的底部线和父元素的底部线重叠，并且父元素的高度是auto，
+那么这个块级元素的margin-bottom值会传递给父元素 */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+
+        /* 演示传递 */
+        .box {
+            width: 200px;
+            /* height: 100px; */
+            background-color: orange;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            /* 这么设置没有反应，没有传递，删除父元素的height，默认是auto，直接去掉 */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <div class="inner"></div>
+    </div>
+
+    <div class="box1"></div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /* .head{
+            height: 30px;
+            background-color: #000;
+            min-width: 1260px;
+
+        }
+        .main-content{
+            width: 1090px;
+            margin: 0 auto;
+            
+        }
+        .main-content>ul>li{
+            display: inline-block;
+           
+        }
+        .main-content>ul>li>a {
+            display: inline-block;
+            font-size: 14px;
+            color: #999;
+            line-height: 100%;
+            padding: 8px 10px;
+        }
+        .main-content>ul>li>a:hover{
+            color: #fff;
+        }
+        #phone{
+            position: relative;
+        }
+        #qrcode{
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: -30px;
+            border: 1px solid #ededee;
+            padding: 10px 5px 0 5px;
+            
+        }
+        .arrow{
+            position: absolute;
+            display:none;
+            top: 35px;
+            left: 28px;
+            height:12px;
+            width: 12px;
+            background-color: white;
+            border-top:1px solid #ededee; 
+            border-left:1px solid #ededee; 
+            transform: rotate(45deg);
+            z-index: 5;
+        }
+        #phone:hover>#qrcode{
+            display: inline-block;
+        }
+        #phone:hover>.arrow{
+            display: inline-block;
+        } */
+
+        #app{
+            position: relative;
+        }
+        #qrcode{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="main-content">
+            <a href="#" id="app">
+                <span>手机考拉考拉手手机考拉</span>
+                <span id="qrcode">
+                   <img src="img/qrcode.png" alt="">
+                    <span>下载</span>
+                    <span>领10元无门槛券</span> 
+                </span>
+            </a>
+
+            <span id="mys">span element</span>
+
+        </div>
+    </div>
+
+                     
+
+</body>
+<script>
+    var mys = document.getElementById("mys");
+
+    console.log("left" + getComputedStyle(mys,null).height)
+    console.log("right" + getComputedStyle(mys,null).width)
+</script>
+</html>

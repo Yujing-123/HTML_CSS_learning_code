@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: auto;
+           /*  height: auto; */
+            background-color: #f00;
+        }
+
+        .inner{
+            width: 150px;
+            height: 100px;
+            background-color: yellow;
+           /*  margin-left: 0;
+            margin-right: 0; */
+            /* margin-right和margin-left的默认值都是0
+            它左边还有很多宽度剩余，浏览器在布局的时候就要考虑
+            这个左边剩余的宽度空间需要分配给谁，marin-left和margin-right
+            都是0px，所以浏览器不会给它分配了。
+            如果把marin-left该成auto
+             */
+           /*   margin-left: auto;
+            margin-right: 0; */
+            /* 浏览器会把剩余的空间给配给auto的这个属性，
+            所以这个黄色盒子就会靠着右边
+             */
+             /* margin-left: auto;
+             margin-right: auto; */
+             /* 两个都是auto，浏览器就是会把剩余空间均分 */
+
+             /* auto：让浏览器帮助分配剩余空间 */
+
+
+           /* 实现不了垂直居中。垂直意味着父元素高度必须auto
+           ，给父元素的div的高度设置为atuo，下面才能实现居中.
+           实际上这个时候父亲的高度就是孩子的高度，孩子吧父亲撑了
+           起来，所以就没有居中不居中这一说
+            */
+             margin-top: auto;
+             margin-bottom: auto;
+
+
+            /* 下面可以实现的原因是因为父亲的宽度是atuo的 */
+             margin-left: auto;
+             margin-right: auto;
+
+             /* 实现垂直居中的常用办法
+             让div向下移动父元素高度的一半，再减去自身的一半
+              */
+
+              /* margin-top参照的是refet to th width of the containing block */
+              /* 参照的是它父元素的宽度
+              这时候得用定位
+               */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

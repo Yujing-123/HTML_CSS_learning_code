@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 父元素中唯一子元素 */
+        /* html是文档里面唯一的子元素，所以全部元素都会变红 */
+        /* :only-child {
+            color: red;
+        } */
+
+        /* span:only-child {
+            color: red;
+        } */
+
+        /* or */
+        /* div :only-child {
+            color: red;
+        } */
+
+        /* or */
+        /* body :only-child {
+            color: red;
+        } */
+
+        /* body里面唯一类型的子元素 
+        :only-of-type
+        代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。
+        */
+        body :only-of-type {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            <span>文字内容1</span>
+        </p>
+        <div>文字内容2</div>
+        <div>文字内容div</div>
+    </div>
+    <div>
+        <strong>文字内容3</strong>
+        <a href="">
+            <span>文字内容4</span>
+        </a>
+    </div>
+</body>
+
+</html>

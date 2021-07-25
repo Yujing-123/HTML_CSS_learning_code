@@ -1,0 +1,12 @@
+div{
+    height: 400px;
+    width: 300px;
+    background-color:red;
+}
+一个元素是可以有多个类，多个类以空格进行分割
+类的名字规范：
+1. 尽量见名知意
+2. 当多个单词时， 以什么方式链接
+   * -连接 ： large-font
+   * _连接 ： large_font
+   *驼峰连接 ：largeFont

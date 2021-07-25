@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 想给span前加一个1 */
+        /*span::before 不要看成css的一个属性，把它看成一个元素  */
+        /* content不能少 */
+        /* 伪元素是行内元素，不能设置宽度和高度 */
+        span::before {
+            /* 实实在在往span前加个元素，元素的内容就是content里面的东西 */
+            content: "1";
+
+            color: red;
+            margin-right: 60px;
+        }
+
+        span::after {
+            /* 实实在在往span前加个元素，元素的内容就是content里面的东西 */
+           /*  content: "abc"; */
+           /* 也可以加图片 */
+           content: url(img/1.jpg);
+
+            color: red;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>我是一个span元素</span>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+        }
+
+        /* 演示传递 */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+
+/* 左右不会传递，儿子相对于父亲marginleft了20px */
+            margin-left: 20px;
+
+/* margin-top传递
+如果块级元素的顶部线和父元素的顶部线重叠，那么这个块级元素的margin-top值会传递给父元素 */
+       /* 这样子的话就是给父亲margin top了一个20px */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <div class="box">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

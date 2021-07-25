@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: #f00;
+            margin: 0 auto;
+            /* 
+            第1个<length>：水平方向的偏移，正数往右偏移
+
+            第2个<length>：垂直方向的偏移，正数往下偏移
+
+            第3个<length>：模糊半径（blur radius）
+
+            第4个<length>：延伸距离
+
+            <color>：阴影的颜色，如果没有设置，就跟随color属性的颜色
+            inset：外框阴影变成内框阴影
+             */
+            box-shadow: inset -15px 5px 5px 5px orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

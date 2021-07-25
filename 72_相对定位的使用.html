@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+        }
+        a{
+            position: relative;
+            left: 20px;/* 相对于原来位置左边那栋墙，距离20px。 
+            跟别人没关系，只改变自己的位置，
+            而且不改变原来占据的空间，大小不会改变
+            */
+        }
+
+        /* 让strong元素跑到图片里面,实现层叠 */
+        strong{
+            position: relative;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+     <span>span元素</span>
+     <strong>strong元素</strong>
+     <img src="img/wall.png" alt="">
+     <div>div元素</div>
+     <a href="">百度一下</a>
+     <i>i元素</i>
+     <i>i元素</i>
+     <i>i元素</i>
+</body>
+</html>

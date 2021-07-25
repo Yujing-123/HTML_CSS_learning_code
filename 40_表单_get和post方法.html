@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://www.baidu.com" 
+    method="post"
+    target="_blank"
+    >
+        <!-- post就不会拼接了，会放到form data（请求体）中，不会再url后面展示 -->
+        <!-- 如果希望提交表之后，在新的页面打开服务器返回的页面，就需要设置target -->
+        <fieldset>
+            <legend>必填信息</legend>
+            <!-- 手机输入框 -->
+            <div>
+                <label for="phone">手机:</label>
+                <input type="text"
+                 maxlength="10" 
+                 placeholder="请输入您的手机号码"
+                name="phone"
+                 autofocus
+                 id="phone"
+            
+                 >
+            </div>
+            <!-- 密码输入框 -->
+            <div>
+            
+                <label for="password">密码:</label>
+                <input type="password" 
+                placeholder="请输入您的密码"  
+                name="password"
+                id="password">
+            </div>
+            <!-- 验证码输入框 -->
+            <div>
+                <span>验证码:</span>
+                <input type="text"  name="yanzhengma">
+                <!-- 实现按钮的两种方法 -->
+                <!--1. <button>获取验证码</button> -->
+                <!--2. 使用input实现 -->
+                <input type="button" 
+                value="获取验证码" 
+             
+                >
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>选填信息</legend>
+            <!-- 照片选择 -->
+            <div>
+             
+                <label for="file">照片：</label>
+                <input type="file" id="file" name="file">
+
+            </div>
+            <!-- 性别选择 -->
+            <div>
+                <span>性别:</span>
+                <label for="male">男</label>
+                <input type="radio" name="sex" id="male" value="male">
+                <label for="famale">女</label>
+                <input type="radio" name="sex" id="famale" value="famale">
+            </div>
+            <!-- 兴趣选择 -->
+            <div>
+                <span>兴趣：</span>
+                <!-- 复选框 -->
+                <label for="sing">唱歌</label>
+                <input type="checkbox" name="hobby" id="sing" value="sing">
+                <label for="dance">跳舞</label>
+                <input type="checkbox" name="hobby" id="dance" value="dance">
+                <label for="rap">rap</label>
+                <input type="checkbox" name="hobby" id="rap" value="rap">
+                <label for="basketball">篮球</label>
+                <input type="checkbox" name="hobby" id="basketball" value="basketball">
+            </div>
+            <!-- 学历选择 -->
+            <div>
+                <span>学历：</span>
+                <select name="education" id="education" multiple>
+                    <option value="0">小学</option>
+                    <option value="1">初中</option>
+                    <option value="2" selected>高中</option>
+                    <option value="3">大学</option>
+                </select>
+            </div>
+            <!-- 简介 -->
+            <div>
+                <label for="intro">自我简介：</label>
+                <textarea name="intro" id="intro" cols="30" rows="10" ></textarea>
+                </div>
+        </fieldset>
+        <input type="reset">
+        <input type="submit">
+
+    </form>
+</body>
+</html>

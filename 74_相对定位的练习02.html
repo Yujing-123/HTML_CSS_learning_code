@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        min-width: 1000px;/* box的最小宽度 */
+    }
+    /* 不设置样式的话，img就直接把浏览器撑开，出现了滚动条，我们希望它的宽度和浏览器一样 */
+    /* 1.我们希望这个div的宽度等于浏览器的宽度 */
+    .box{
+        overflow: hidden;
+    }
+    /* 块级元素的宽度是atuo，就是父元素多宽，它多宽，所以设置overflow：hidden会隐藏超过浏览器宽度的东西
+    如果不设置overflow，它的宽度值还是auto，它的宽度会由它里面内容撑大，会优先考虑内容
+    */
+
+    /* 希望图片向左移动的距离：
+    = 图片宽度*0.5 – div宽度*0.5
+    = 960px – div宽度*0.5
+    = 向左移动图片的一半 + 向右移动div的一半
+ */
+
+   .box img{
+       position: relative;
+       /* 1.向左移动图片的一半 */
+       /* right: 50%; *//*left的百分比还是相对于父元素的，我们需要相对于自己的百分比，这时候就需要trnasform */
+       transform: translate(-50%);/* 相对自己移动-50% */
+       /* 2.向右移动父元素（div）的一半 */
+       margin-left: 50%;/* margin的百分比是相对于包含块（父亲）的 */
+
+   }
+</style>
+<body>
+    <div class="box">
+        <img src="img/mhxy.jpg" alt="">
+    </div>
+</body>
+</html>

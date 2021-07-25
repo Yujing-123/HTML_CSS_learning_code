@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        div {
+            position: relative;
+            background-color: #f00;
+            /* 希望宽度包裹内容 */
+            display: inline-block;
+            /* inline-block:宽高默认由内容决定（没有设置宽度和高度的情况下） */
+        }
+
+        .beauty-left ul {
+            position: absolute;
+            bottom: 20px;
+            width: 285px;
+            text-align: justify;
+            text-align-last: justify;
+            /*  巨中显示  */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+        }
+
+        .beauty-left ul li {
+            /*ul  li是块级元素 */
+            display: inline-block;
+        }
+
+        .beauty-left ul li a {
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            margin-top: 10px;
+            text-align: center;
+            text-align-last: center;
+            font-size: 12px;
+            line-height: 40px;
+            border: 1px solid #eee;
+            border-radius: 40px;
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+
+        }
+        .beauty-left ul li a:hover{
+            color: #ff1e32;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="beauty-left">
+        <a href="">
+            <img src="img/beauty-left-img.jpg" alt="">
+        </a>
+        <ul>
+            <li><a href="#">精致护肤</a></li>
+            <li><a href="#">人气面膜</a></li>
+            <li><a href="#">大牌彩妆</a></li>
+            <li><a href="#">防晒修护</a></li>
+            <li><a href="#">迷人香氛</a></li>
+            <li><a href="#">面部精华</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

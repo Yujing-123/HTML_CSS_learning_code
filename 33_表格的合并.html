@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid skyblue;
+            border-collapse: collapse;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td,
+        th {
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        [colspan],
+        [rowspan] {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 单元格合并 -->
+    <!-- 
+1．TD：英文全称是＂tabledatacell＂，中文意思是“表中的数据单元”。
+
+2．TR：英文全称是＂tablerow＂的缩写”的缩写。
+
+3．TH：英文全称是＂tableheadercell＂的缩写，在中文中是“表头单元格”的意思。 -->
+
+
+
+    <!-- 
+column:列
+row:行
+ -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">1</th>
+
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+                <td>单元格4</td>
+                <td rowspan="2">单元格5</td>
+                <td>单元格6</td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="2">单元格1</td>
+
+                <td>单元格3</td>
+                <td>单元格4</td>
+
+                <td>单元格6</td>
+            </tr>
+            <tr>
+
+                <td>单元格3</td>
+                <td>单元格4</td>
+                <td>单元格5</td>
+                <td>单元格6</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- 练习 -->
+
+    <table style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th colspan="6">课程表</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4" class="time">上午</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="time">下午</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="time">晚自习</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+            <tr>
+
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+                <td>化学</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 要求：无论屏幕大小多少，都能看到内容主要内容，并且剧中显示 */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 400px;
+            min-width: 1000px;
+
+            background-image: url(./img/mhxy.jpg);
+            background-position: center -81px;
+            /* img  ： 1920 489 */
+            /* 有一个缺陷，就是不能根据图片的宽高来决定div的宽高
+            如果搞个img的话，就能把盒子撑开，不需要给div设置宽高，所以用相对定位比较好
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

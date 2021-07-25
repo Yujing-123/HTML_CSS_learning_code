@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a{
+        color: red;
+    }
+    /* 未访问的状态
+    a:link {
+        color: red;
+    }
+
+    /* 已经访问过 */
+    /* a:visited {
+        color: greenyellow;
+    } */
+
+    /* 手指（鼠标）放上去 */
+    /* a:hover {
+        color: blue;
+    } */
+
+    /* 手指点下去，未松手 */
+    /* a:active {
+        color: orange;
+    } */ */
+
+    /* focus伪类，指当前拥有输入焦点的元素（能接收键盘输入） */
+    /* 文本输入框一聚焦后，背景就会变红色 */
+    input:focus {
+        background-color: red;
+    }
+
+    /* 按住tab键就可以选择中a元素 */
+/*     a:focus {
+        background-color: red;
+    } */
+
+
+    /* 因为链接a元素可以被键盘的Tab键选中聚焦，所以:focus也适用于a元素,按Tab键就可以选中a元素
+
+动态伪类编写顺序建议为
+:link、:visited、:focus、:hover、:active
+记忆：女朋友看到LV包包后，（Feng）疯一样地ha ha大笑 */
+
+
+    /* 去除a元素默认的:focus效果 */
+    /* 第一种是给a元素设置none属性，但是按Tab键还是可以选中，只不过没有外框了 */
+
+/*     a:focus {
+
+        outline: none;
+
+    } */
+
+    /* 
+第二种是将tabindex属性设置为1
+
+
+
+
+
+
+细节：
+
+直接给a元素设置样式，相当于给a元素的所有动态伪类都设置了 
+
+相当于a:link、a:visited、a:hover、a:active、a:focus的color都是red*/
+/* 
+a {
+        color: red；
+    } */
+</style>
+
+<body>
+    <!-- 
+a:link 未访问的链接
+a:visited 已访问的链接
+a:hover 鼠标挪动到链接上
+a:active 激活的链接（鼠标在链接上长按住未松开）
+
+     -->
+
+
+    <a href="">点击一下</a>
+    <a tabindex = "-1" href="">不能被tab键选中，因为他的tabindex是-1</a>
+
+    <input type="text">
+</body>
+
+</html>

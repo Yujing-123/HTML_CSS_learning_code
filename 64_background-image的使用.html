@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        ：如果设置了背景图片后，元素没有具体的宽高，背景图片是不会显示出来的，
+        意思就是背景图是不会把元素撑起来的
+         */
+        .box{
+            width: 800px;
+            height: 1500px;
+            background-color: #f00;
+
+            /* 可以设置多张，默认显示的是第一张 */
+            background-image: url(./img/3.jpg), url(./img/2.jpg);
+
+            /* 平铺效果 */
+            /* repeat：平铺（默认）
+            no-repeat：不平铺
+            repeat-x：只在水平方向平铺
+            repeat-y：只在垂直平方向平铺 */
+            background-repeat: repeat-x;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

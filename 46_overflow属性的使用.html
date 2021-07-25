@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: #f00;
+            width: 900px;
+            height: 1100px;
+            /* overflow */
+            /* visible:超出依然可见，默认值 */
+           /*  overflow: visible; */
+
+           /* hidden 超出部分，隐藏起来 */
+        /*    overflow: hidden; */
+
+
+           /* scroll:溢出的内容被剪裁，但可以通过滚动机制查看
+           滚动条也属于宽度和高度的一部分
+            */
+
+           /* overflow: scroll; */
+
+           /* auto
+           自动根据内容是否溢出决定是否提供滚动机制
+            */
+            /* 如果设置是scroll的话，如果没有溢出，还是有滑动条的
+            我们希望没有溢出的话就不显示滚动条，
+            溢出的话显示滚动条，这时候就可以设置为atuo
+             */
+             overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/2.jpg" alt="">
+    </div>
+</body>
+</html>

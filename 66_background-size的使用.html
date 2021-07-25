@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 800px;
+            height: 500px;
+            background-color: #f00;
+            background-image: url(./img/4.jpg);
+            background-repeat: no-repeat;
+            /*1. cover：图片会被拉伸，让背景图片覆盖整个元素 */
+            /* background-size: cover; */
+
+            /*2. contain: 对背景图片进行拉伸，拉伸到一个方向的宽度（高度）
+            不再进行拉伸，保持图片的宽高比
+            */
+           /*  background-size: contain; */
+
+
+            /* 3.百分比
+            让宽度站元素宽度的百分之30.（水平值）
+             */
+           background-size: 30%;
+
+           /* 设置值的时候，设置两个，就是一个为水平，一个垂直 */
+           background-size: 30% 80%;
+
+           /* 4 具体大小 */
+           /* 一个值的话就是设置水平方向，保持宽高比 */
+           background-size: 100px;
+          /* 两个的话就是水平和垂直 */
+          background-size: 100px 180px;
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* list-style-type：设置li元素前面标记的样式
+        disc（实心圆）、circle（空心圆）、square（实心方块）
+        decimal（阿拉伯数字）、lower-roman（小写罗马数字）、upper-roman（大写罗马数字）
+        lower-alpha（小写英文字母）、upper-alpha（大写英文字母）
+        none（什么也没有） */
+        /* ul{
+            list-style-type: decimal;/* 和ol的差异就这么一个，设置这个就是ol */
+      /*  }*/
+       /* ul{
+            list-style-type: upper-roman;/* 和ol的差异就这么一个，设置这个就是ol */
+      /*  } 
+        */
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            /* 以上的三个设定是平常应用的最多的 */
+        }
+        /* 如果想加东西的话，自己加 */
+        /* 
+        
+    <h2>宾利车型</h2>
+    <ul>
+        <li><span>1</span>慕尚</li>
+        <li><span>2</span>飞驰</li>
+        <li><span>3</span>欧陆系列</li>
+        <li><span>4</span>添越</li>
+        <li><span>5</span>宾利甄选</li>
+    </ul>
+
+        
+         */
+         ul li{
+             margin-top: 8px;
+         }
+         ul li span{
+             background-color: #f00;
+             color: #fff;
+             padding: 0 5px;
+         }
+
+         ul{
+             margin-left: 200px;
+             list-style-image: url(img/2.jpg);
+         }
+         /* 把点点换成图片
+         
+         但是平常也不这么用
+         往内容里面加一个i元素（i是斜体，现在用于设置图标 ，因为它像是icon的缩写）
+         <li><i>5</i>宾利甄选</li>
+          */
+
+
+          /* 记住 */
+         ul{
+             list-style: none;
+         }
+    </style>
+</head>
+<body>
+    <!-- 有序列表 -->
+    <h2>热门车系</h2>
+    <ol>
+        <li>奥迪A6L</li>
+        <li>宝马5系</li>
+        <li>宝马3系</li>
+        <li>雅阁</li>
+        <li>福尔斯</li>
+    </ol>
+    <!-- 无需列表 -->
+
+    <h2>宾利车型</h2>
+    <ul>
+        <li>慕尚</li>
+        <li>飞驰</li>
+        <li>欧陆系列</li>
+        <li>添越</li>
+        <li>宾利甄选</li>
+    </ul>
+
+    <!-- 定义列表 -->
+    <dl>
+        <dt>西瓜汁</dt><!-- 题目  ：列表中每一项的项目名 -->
+        <dd>红色的饮料</dd><!-- 描述 ：列表中每一项的具体描述，是对 dt 的描述、解释、补充-->
+
+        <dt>咖啡</dt>
+        <dd>黑色的饮料</dd>
+
+        <dt>牛奶</dt>
+        <dd>白色的饮料</dd>
+    </dl>
+
+
+    <h2>车型</h2>
+    <dl>
+        <dt>SUV</dt>
+        <dd>牧马人</dd>
+        <dd>普拉多</dd>
+        <dd>揽胜</dd>
+        <dd>Cayene</dd>
+ 
+        <dt>大型车</dt>
+        <dd>奥迪</dd>
+        <dd>奔驰</dd>
+        <dd>宝马</dd>
+    </dl>
+
+
+    <h2>宾利车型</h2>
+    <ul>
+        <li><span>1</span>慕尚</li>
+        <li><span>2</span>飞驰</li>
+        <li><span>3</span>欧陆系列</li>
+        <li><span>4</span>添越</li>
+        <li><span>5</span>宾利甄选</li>
+    </ul>
+    
+
+
+
+</body>
+</html>

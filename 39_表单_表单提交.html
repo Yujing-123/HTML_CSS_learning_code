@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,select,textarea{
+            outline: none;
+        }
+        input:focus, textarea:focus{
+            border-color: #4791ff;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+
+        表单提交：将用户在input中输入的内容提交给服务器
+        有两种提交方式
+        1.传统的表单提交
+        ·将所有的input包包裹到一个form中
+        ·form设置action（服务器的地址）
+        ·form里面必须有input/button的类型是submit
+        之后，点击submit，自动将所有的数据提交给服务器
+        弊端1：会进行页面的跳转（意味着服务器必须提前将一个页面写好，
+        并且将写好的页面返回给前端，前端直接显示这个页面）
+        服务器直接将页面写好：服务端渲染
+        弊端2：不方便进行表单数据的验证
+
+        2.前后端分类
+        ·通过js先获取到所有表单的内容
+        ·通过正则表达式进行表单验证
+        ·发送ajax请求，将数据传递给服务器
+        ·验证成功之后，服务器会返回结果，需要前端解析这个数据，并且决定
+         显示什么内容（前端渲染和前端路由）
+     -->
+
+
+<!-- 演示传统方式表单提交 -->
+
+     <form action="http://www.baidu.com">
+        <!-- fieldset
+        表单元素组
+
+        legend
+        fieldset的标题
+     -->
+        <fieldset>
+            <legend>必填信息</legend>
+            <!-- 手机输入框 -->
+            <div>
+                <label for="phone">手机:</label>
+                <input type="text"
+                 maxlength="10" 
+                 placeholder="请输入您的手机号码"
+                name="phone"
+                 autofocus
+                 id="phone"
+            
+                 >
+            </div>
+            <!-- 密码输入框 -->
+            <div>
+            
+                <label for="password">密码:</label>
+                <input type="password" 
+                placeholder="请输入您的密码"  
+                name="password"
+                id="password">
+            </div>
+            <!-- 验证码输入框 -->
+            <div>
+                <span>验证码:</span>
+                <input type="text"  name="yanzhengma">
+                <!-- 实现按钮的两种方法 -->
+                <!--1. <button>获取验证码</button> -->
+                <!--2. 使用input实现 -->
+                <input type="button" 
+                value="获取验证码" 
+             
+                >
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>选填信息</legend>
+            <!-- 照片选择 -->
+            <div>
+             
+                <label for="file">照片：</label>
+                <input type="file" id="file" name="file">
+
+            </div>
+            <!-- 性别选择 -->
+            <div>
+                <span>性别:</span>
+                <label for="male">男</label>
+                <input type="radio" name="sex" id="male" value="male">
+                <label for="famale">女</label>
+                <input type="radio" name="sex" id="famale" value="famale">
+            </div>
+            <!-- 兴趣选择 -->
+            <div>
+                <span>兴趣：</span>
+                <!-- 复选框 -->
+                <label for="sing">唱歌</label>
+                <input type="checkbox" name="hobby" id="sing" value="sing">
+                <label for="dance">跳舞</label>
+                <input type="checkbox" name="hobby" id="dance" value="dance">
+                <label for="rap">rap</label>
+                <input type="checkbox" name="hobby" id="rap" value="rap">
+                <label for="basketball">篮球</label>
+                <input type="checkbox" name="hobby" id="basketball" value="basketball">
+            </div>
+            <!-- 学历选择 -->
+            <div>
+                <span>学历：</span>
+                <select name="education" id="education" multiple>
+                    <option value="0">小学</option>
+                    <option value="1">初中</option>
+                    <option value="2" selected>高中</option>
+                    <option value="3">大学</option>
+                </select>
+            </div>
+            <!-- 简介 -->
+            <div>
+                <label for="intro">自我简介：</label>
+                <textarea name="intro" id="intro" cols="30" rows="10" ></textarea>
+                </div>
+        </fieldset>
+        <input type="reset">
+        <input type="submit">
+
+    </form>
+<!-- 
+https://www.baidu.com/?
+phone=12341234
+&password=1234132
+&yanzhengma=12341234
+&file=1.jpg
+&sex=male
+&hobby=sing
+&hobby=basketball
+&education=3
+&intro=asdfasdf
+-->
+</body>
+</html>

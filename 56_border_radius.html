@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+
+
+            /* 针对每一个角落单独设置 */
+            /*  border-top-left-radius: 10px 20px; */
+            /*    border-top-left-radius:30px;
+           border-top-right-radius:30px;
+           border-bottom-left-radius:30px;
+           border-bottom-right-radius:30px; */
+
+            /* 放到一个设置 */
+            border-radius: 40px;
+        }
+
+        .box2 {
+            background-color: red;
+            border: 20px solid black;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            /* 推荐写50%而不是50px，因为border改变之后整个盒子的大小会改变
+            写百分比的话比较方便
+
+            border-radius参考的是当前元素的border+paddding+width
+             */
+
+        }
+
+        .box3 {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            outline: 10px solid yellowgreen;
+            /* 不占空间，在border外面 */
+            border: 20px solid violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <br>
+    <div class="box2"></div>
+
+    <br>
+    <div class="box3"></div>
+</body>
+
+</html>

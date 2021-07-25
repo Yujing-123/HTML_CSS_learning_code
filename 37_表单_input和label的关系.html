@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+
+            outline: none;
+
+        }
+
+        /* 如果想在inpput聚焦的情况下，改变border */
+/*         input:focus {
+            border-color: #4791ff;
+            border-style: solid;
+
+        } */
+
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用label的话，当点击手机号这个文字的时候，这个文字框自动获得焦点 -->
+    <div>
+        <label for="phone">手机号:</label>
+        <input type="text" id="phone">
+        <!--  <input type="text" id="phone" tabindex="-1"> -->
+    </div>
+    <div>
+        <label for="pw">密码:</label>
+        <input type="password" id="pw">
+    </div>
+    <!-- 使用label的话，点击男这个文字的时候，男就会被自动选择上 -->
+    <div>
+        <span>性别:</span>
+        <label for="male">男</label>
+        <input type="radio" name="sex" id="male">
+        <label for="famale">女</label>
+        <input type="radio" name="sex" id="famale">
+    </div>
+
+
+    <!-- 兴趣选择 -->
+    <div>
+        <span>兴趣：</span>
+        <!-- 复选框 -->
+        <label for="sing">唱歌</label>
+        <input type="checkbox" name="hobby" id="sing">
+        <label for="dance">跳舞</label>
+        <input type="checkbox" name="hobby" id="dance">
+        <label for="rap">rap</label>
+        <input type="checkbox" name="hobby" id="rap">
+        <label for="basketball">篮球</label>
+        <input type="checkbox" name="hobby" id="basketball">
+    </div>
+
+    <div>
+<label for="intro">自我简介：</label>
+<textarea name="" id="intro" cols="30" rows="10"></textarea>
+
+    </div>
+</body>
+
+</html>
